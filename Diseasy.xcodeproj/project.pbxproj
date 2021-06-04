@@ -9,21 +9,53 @@
 /* Begin PBXBuildFile section */
 		20FC17FF2668923B0079D4F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC17FE2668923B0079D4F5 /* AppDelegate.swift */; };
 		20FC18012668923B0079D4F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18002668923B0079D4F5 /* SceneDelegate.swift */; };
-		20FC18032668923B0079D4F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18022668923B0079D4F5 /* ViewController.swift */; };
 		20FC18062668923B0079D4F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18042668923B0079D4F5 /* Main.storyboard */; };
 		20FC18082668923C0079D4F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18072668923C0079D4F5 /* Assets.xcassets */; };
 		20FC180B2668923C0079D4F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18092668923C0079D4F5 /* LaunchScreen.storyboard */; };
+		20FC18152668AE160079D4F5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18142668AE160079D4F5 /* Constants.swift */; };
+		20FC181A2668D9BB0079D4F5 /* SettingSliderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18182668D9BB0079D4F5 /* SettingSliderCell.swift */; };
+		20FC181B2668D9BB0079D4F5 /* SettingSliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18192668D9BB0079D4F5 /* SettingSliderCell.xib */; };
+		20FC18202668E0940079D4F5 /* SettingStepperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC181E2668E0940079D4F5 /* SettingStepperCell.swift */; };
+		20FC18212668E0940079D4F5 /* SettingStepperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC181F2668E0940079D4F5 /* SettingStepperCell.xib */; };
+		20FC18252668E6990079D4F5 /* SettingSwitchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18232668E6990079D4F5 /* SettingSwitchCell.swift */; };
+		20FC18262668E6990079D4F5 /* SettingSwitchCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18242668E6990079D4F5 /* SettingSwitchCell.xib */; };
+		20FC182A2668E8AB0079D4F5 /* SettingTextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18282668E8AB0079D4F5 /* SettingTextFieldCell.swift */; };
+		20FC182B2668E8AB0079D4F5 /* SettingTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18292668E8AB0079D4F5 /* SettingTextFieldCell.xib */; };
+		20FC182F2668E9220079D4F5 /* SettingCompositeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC182D2668E9220079D4F5 /* SettingCompositeCell.swift */; };
+		20FC18302668E9220079D4F5 /* SettingCompositeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC182E2668E9220079D4F5 /* SettingCompositeCell.xib */; };
+		20FC18322668F03F0079D4F5 /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18312668F03F0079D4F5 /* ParametersViewController.swift */; };
+		20FC1834266908710079D4F5 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1833266908710079D4F5 /* SettingItem.swift */; };
+		20FC183926693C930079D4F5 /* UIButtonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183826693C930079D4F5 /* UIButtonBackground.swift */; };
+		20FC183B266946DC0079D4F5 /* TuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183A266946DC0079D4F5 /* TuneViewController.swift */; };
+		20FC183D266A0D700079D4F5 /* SettingsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183C266A0D700079D4F5 /* SettingsUtils.swift */; };
+		20FC1840266A12850079D4F5 /* DiseaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183F266A12850079D4F5 /* DiseaseModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		20FC17FB2668923B0079D4F5 /* Diseasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diseasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FC17FE2668923B0079D4F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FC18002668923B0079D4F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		20FC18022668923B0079D4F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		20FC18052668923B0079D4F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20FC18072668923C0079D4F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		20FC180A2668923C0079D4F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		20FC180C2668923C0079D4F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		20FC18142668AE160079D4F5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		20FC18182668D9BB0079D4F5 /* SettingSliderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSliderCell.swift; sourceTree = "<group>"; };
+		20FC18192668D9BB0079D4F5 /* SettingSliderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSliderCell.xib; sourceTree = "<group>"; };
+		20FC181E2668E0940079D4F5 /* SettingStepperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingStepperCell.swift; sourceTree = "<group>"; };
+		20FC181F2668E0940079D4F5 /* SettingStepperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingStepperCell.xib; sourceTree = "<group>"; };
+		20FC18232668E6990079D4F5 /* SettingSwitchCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingSwitchCell.swift; sourceTree = "<group>"; };
+		20FC18242668E6990079D4F5 /* SettingSwitchCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingSwitchCell.xib; sourceTree = "<group>"; };
+		20FC18282668E8AB0079D4F5 /* SettingTextFieldCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingTextFieldCell.swift; sourceTree = "<group>"; };
+		20FC18292668E8AB0079D4F5 /* SettingTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTextFieldCell.xib; sourceTree = "<group>"; };
+		20FC182D2668E9220079D4F5 /* SettingCompositeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCompositeCell.swift; sourceTree = "<group>"; };
+		20FC182E2668E9220079D4F5 /* SettingCompositeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCompositeCell.xib; sourceTree = "<group>"; };
+		20FC18312668F03F0079D4F5 /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
+		20FC1833266908710079D4F5 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
+		20FC183826693C930079D4F5 /* UIButtonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackground.swift; sourceTree = "<group>"; };
+		20FC183A266946DC0079D4F5 /* TuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneViewController.swift; sourceTree = "<group>"; };
+		20FC183C266A0D700079D4F5 /* SettingsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUtils.swift; sourceTree = "<group>"; };
+		20FC183F266A12850079D4F5 /* DiseaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +88,111 @@
 		20FC17FD2668923B0079D4F5 /* Diseasy */ = {
 			isa = PBXGroup;
 			children = (
+				20FC183E266A12640079D4F5 /* Models */,
+				20FC18172668D8E40079D4F5 /* Views */,
+				20FC1842266A1BA70079D4F5 /* Controllers */,
+				20FC1841266A1B950079D4F5 /* Utils */,
+				20FC1835266912AA0079D4F5 /* Protocols */,
 				20FC17FE2668923B0079D4F5 /* AppDelegate.swift */,
 				20FC18002668923B0079D4F5 /* SceneDelegate.swift */,
-				20FC18022668923B0079D4F5 /* ViewController.swift */,
 				20FC18042668923B0079D4F5 /* Main.storyboard */,
 				20FC18072668923C0079D4F5 /* Assets.xcassets */,
 				20FC18092668923C0079D4F5 /* LaunchScreen.storyboard */,
 				20FC180C2668923C0079D4F5 /* Info.plist */,
+				20FC18142668AE160079D4F5 /* Constants.swift */,
+				20FC1833266908710079D4F5 /* SettingItem.swift */,
+				20FC183826693C930079D4F5 /* UIButtonBackground.swift */,
 			);
 			path = Diseasy;
+			sourceTree = "<group>";
+		};
+		20FC18172668D8E40079D4F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				20FC182C2668E8D90079D4F5 /* SettingCompositeCell */,
+				20FC18272668E88C0079D4F5 /* SettingTextFieldCell */,
+				20FC18222668E67D0079D4F5 /* SettingSwitchCell */,
+				20FC181D2668E0710079D4F5 /* SettingStepperCell */,
+				20FC181C2668E04C0079D4F5 /* SettingSliderCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		20FC181C2668E04C0079D4F5 /* SettingSliderCell */ = {
+			isa = PBXGroup;
+			children = (
+				20FC18182668D9BB0079D4F5 /* SettingSliderCell.swift */,
+				20FC18192668D9BB0079D4F5 /* SettingSliderCell.xib */,
+			);
+			path = SettingSliderCell;
+			sourceTree = "<group>";
+		};
+		20FC181D2668E0710079D4F5 /* SettingStepperCell */ = {
+			isa = PBXGroup;
+			children = (
+				20FC181E2668E0940079D4F5 /* SettingStepperCell.swift */,
+				20FC181F2668E0940079D4F5 /* SettingStepperCell.xib */,
+			);
+			path = SettingStepperCell;
+			sourceTree = "<group>";
+		};
+		20FC18222668E67D0079D4F5 /* SettingSwitchCell */ = {
+			isa = PBXGroup;
+			children = (
+				20FC18232668E6990079D4F5 /* SettingSwitchCell.swift */,
+				20FC18242668E6990079D4F5 /* SettingSwitchCell.xib */,
+			);
+			path = SettingSwitchCell;
+			sourceTree = "<group>";
+		};
+		20FC18272668E88C0079D4F5 /* SettingTextFieldCell */ = {
+			isa = PBXGroup;
+			children = (
+				20FC18282668E8AB0079D4F5 /* SettingTextFieldCell.swift */,
+				20FC18292668E8AB0079D4F5 /* SettingTextFieldCell.xib */,
+			);
+			path = SettingTextFieldCell;
+			sourceTree = "<group>";
+		};
+		20FC182C2668E8D90079D4F5 /* SettingCompositeCell */ = {
+			isa = PBXGroup;
+			children = (
+				20FC182D2668E9220079D4F5 /* SettingCompositeCell.swift */,
+				20FC182E2668E9220079D4F5 /* SettingCompositeCell.xib */,
+			);
+			path = SettingCompositeCell;
+			sourceTree = "<group>";
+		};
+		20FC1835266912AA0079D4F5 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		20FC183E266A12640079D4F5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				20FC183F266A12850079D4F5 /* DiseaseModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		20FC1841266A1B950079D4F5 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				20FC183C266A0D700079D4F5 /* SettingsUtils.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		20FC1842266A1BA70079D4F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20FC18312668F03F0079D4F5 /* ParametersViewController.swift */,
+				20FC183A266946DC0079D4F5 /* TuneViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +253,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				20FC180B2668923C0079D4F5 /* LaunchScreen.storyboard in Resources */,
+				20FC18212668E0940079D4F5 /* SettingStepperCell.xib in Resources */,
+				20FC18302668E9220079D4F5 /* SettingCompositeCell.xib in Resources */,
 				20FC18082668923C0079D4F5 /* Assets.xcassets in Resources */,
 				20FC18062668923B0079D4F5 /* Main.storyboard in Resources */,
+				20FC18262668E6990079D4F5 /* SettingSwitchCell.xib in Resources */,
+				20FC182B2668E8AB0079D4F5 /* SettingTextFieldCell.xib in Resources */,
+				20FC181B2668D9BB0079D4F5 /* SettingSliderCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,9 +270,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20FC18032668923B0079D4F5 /* ViewController.swift in Sources */,
 				20FC17FF2668923B0079D4F5 /* AppDelegate.swift in Sources */,
+				20FC182F2668E9220079D4F5 /* SettingCompositeCell.swift in Sources */,
 				20FC18012668923B0079D4F5 /* SceneDelegate.swift in Sources */,
+				20FC1834266908710079D4F5 /* SettingItem.swift in Sources */,
+				20FC1840266A12850079D4F5 /* DiseaseModel.swift in Sources */,
+				20FC181A2668D9BB0079D4F5 /* SettingSliderCell.swift in Sources */,
+				20FC18322668F03F0079D4F5 /* ParametersViewController.swift in Sources */,
+				20FC183D266A0D700079D4F5 /* SettingsUtils.swift in Sources */,
+				20FC183B266946DC0079D4F5 /* TuneViewController.swift in Sources */,
+				20FC182A2668E8AB0079D4F5 /* SettingTextFieldCell.swift in Sources */,
+				20FC18252668E6990079D4F5 /* SettingSwitchCell.swift in Sources */,
+				20FC18202668E0940079D4F5 /* SettingStepperCell.swift in Sources */,
+				20FC18152668AE160079D4F5 /* Constants.swift in Sources */,
+				20FC183926693C930079D4F5 /* UIButtonBackground.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,6 +433,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBWMNM25CU;
 				INFOPLIST_FILE = Diseasy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,6 +453,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PBWMNM25CU;
 				INFOPLIST_FILE = Diseasy/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
