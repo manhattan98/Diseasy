@@ -9,6 +9,7 @@ import UIKit
 
 class SettingCompositeCell: UITableViewCell {
     static let reusableIdentifier = "SettingCompositeCell"
+    static let nibName = "SettingCompositeCell"
     
     @IBOutlet weak var titleLabel: UILabel!
     

@@ -9,6 +9,7 @@ import UIKit
 
 class SettingSwitchCell: UITableViewCell {
     static let reusableIdentifier = "SettingSwitchCell"
+    static let nibName = "SettingSwitchCell"
 
     @IBOutlet weak var `switch`: UISwitch!
     @IBOutlet weak var titleLabel: UILabel!

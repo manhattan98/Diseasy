@@ -5,20 +5,13 @@
 //  Created by Eremej Sumcenko on 03.06.2021.
 //
 
-import UIKit
-
-protocol SettingCell {
-    var titleText: String { get set }
-    var descriptionText: String { get set }
-    var value: Any { get set }
-    var showValue: Bool { get set }
-}
+import Foundation
 
 class SettingItem {
     let title: String?
     let description: String?
-    
-    internal init(title: String?, description: String? = nil) {
+        
+    internal init(title: String?, description: String?) {
         self.title = title
         self.description = description
     }

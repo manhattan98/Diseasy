@@ -1,16 +1,14 @@
 //
-//  ParametersViewController.swift
+//  TuneViewController.swift
 //  Diseasy
 //
-//  Created by Eremej Sumcenko on 03.06.2021.
+//  Created by Eremej Sumcenko on 04.06.2021.
 //
 
 import UIKit
 
-class ParametersViewController: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
-    
-    
+class TuneViewController: UITableViewController {
+    // settings description
     let settings: [SettingItem] = [
         .SettingSliderItem(get: { Float(SettingsUtils.groupSize) },
                            set: { val in SettingsUtils.groupSize = Int(val) },
@@ -62,98 +60,63 @@ class ParametersViewController: UIViewController {
                             fractionDigits: 1),
     ]
     
+    var buttonProvider: FooterButtonProvider!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
-        // Do any additional setup after loading the view.
+        // register all settings cells
+        tableView.register(UINib(nibName: SettingSliderCell.nibName, bundle: nil), forCellReuseIdentifier: SettingSliderCell.reusableIdentifier)
+        tableView.register(UINib(nibName: SettingStepperCell.nibName, bundle: nil), forCellReuseIdentifier: SettingStepperCell.reusableIdentifier)
+        tableView.register(UINib(nibName: SettingSwitchCell.nibName, bundle: nil), forCellReuseIdentifier: SettingSwitchCell.reusableIdentifier)
         
-        tableView.register(UINib(nibName: SettingSliderCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: SettingSliderCell.reusableIdentifier)
-        tableView.register(UINib(nibName: SettingStepperCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: SettingStepperCell.reusableIdentifier)
-        tableView.register(UINib(nibName: SettingSwitchCell.reusableIdentifier, bundle: nil), forCellReuseIdentifier: SettingSwitchCell.reusableIdentifier)
         
-        tableView.delegate = self
-        tableView.dataSource = self
+        // initialize footer button
+        buttonProvider = FooterButtonProvider(parent: self,
+                                              selector: #selector(buttonPressed),
+                                              fontSize: 17,
+                                              buttonHeight: 50,
+                                              verticalIndent: 40,
+                                              horizontalIndent: 16,
+                                              backgroundColor: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+        
     }
     
-    //override view
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
-}
-
-
-// MARK: - UITableViewDelegate
-extension ParametersViewController: UITableViewDelegate {
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        // minimum upMargin + buttonHeight
-        return 90
-    }
-    
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        var fontSize: CGFloat = 17
-        
-        var upMargin: CGFloat = 40
-        var buttonHeight: CGFloat = 50
-        var buttonWidth: CGFloat = self.view.frame.width - 32
-        
-        
-        let modelButton: UIButton = UIButton()
-        
-        modelButton.setTitle(K.START_MODEL, for: .normal)
-        
-        modelButton.frame = CGRect(x: (self.view.frame.width - buttonWidth) / 2, y: upMargin, width: buttonWidth, height: buttonHeight)
-        
-        
-        modelButton.setTitleColor(.white, for: .normal)
-        modelButton.titleLabel?.font = UIFont.boldSystemFont(ofSize: fontSize)
-        //modelButton.setTitleColor(.lightGray, for: .selected)
-        
-        modelButton.setBackgroundColor(.gray, for: .normal)
-        
-        modelButton.clipsToBounds = true
-        
-        modelButton.layer.cornerRadius = modelButton.frame.height / 4
-                
-        modelButton.addTarget(self, action: #selector(startModelPressed), for: .touchUpInside)
-                        
-        let view = UIView()
-        
-        view.addSubview(modelButton)
-        
-        //view.addConstraint(NSLayoutConstraint(item: view, attribute: .centerX, relatedBy: .equal, toItem: modelButton, attribute: .centerY, multiplier: 1, constant: 1))
-        
-        return view//modelButton
-    }
+    // MARK: - Button callback
     
     @objc
-    func startModelPressed(sender: UIButton) {
-        print("button pressed")
-        
-        //saveSettings()
+    func buttonPressed(sender: UIButton) {
+        self.performSegue(withIdentifier: K.GO_TO_MODELING_SEGUE, sender: self)
+    }
+
+    
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return buttonProvider.footerHeight
     }
     
-}
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        return buttonProvider.footerView
+    }
+    
+    
+    // MARK: - Table view data source
 
-// MARK: - UITableViewDataSource
-extension ParametersViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return settings.count
     }
+
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let settingItem = settings[indexPath.row]
         
         switch settingItem {
@@ -181,9 +144,24 @@ extension ParametersViewController: UITableViewDataSource {
         default:
             fatalError("unknown setting type")
         }
-        
+
     }
     
-    
-}
 
+    
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case K.GO_TO_MODELING_SEGUE:
+            print("performing segue...")
+        default:
+            fatalError("unknown segue")
+        }
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+    }
+    
+
+}

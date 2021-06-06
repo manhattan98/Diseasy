@@ -60,5 +60,5 @@ struct K {
     static let SETTING_SYMPTOMS_PERIOD = "SETTING_SYMPTOMS_PERIOD"
     static let SETTING_QUARANTINE_RATE = "SETTING_QUARANTINE_RATE"
     
-    
+    static let GO_TO_MODELING_SEGUE = "goToModelingSegue"
 }

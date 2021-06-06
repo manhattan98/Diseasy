@@ -9,6 +9,7 @@ import UIKit
 
 class SettingStepperCell: UITableViewCell {
     static let reusableIdentifier = "SettingStepperCell"
+    static let nibName = "SettingStepperCell"
 
     @IBOutlet weak internal var stepper: UIStepper!
     @IBOutlet weak internal var valueLabel: UILabel!

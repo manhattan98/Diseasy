@@ -23,12 +23,15 @@
 		20FC182B2668E8AB0079D4F5 /* SettingTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18292668E8AB0079D4F5 /* SettingTextFieldCell.xib */; };
 		20FC182F2668E9220079D4F5 /* SettingCompositeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC182D2668E9220079D4F5 /* SettingCompositeCell.swift */; };
 		20FC18302668E9220079D4F5 /* SettingCompositeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 20FC182E2668E9220079D4F5 /* SettingCompositeCell.xib */; };
-		20FC18322668F03F0079D4F5 /* ParametersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18312668F03F0079D4F5 /* ParametersViewController.swift */; };
 		20FC1834266908710079D4F5 /* SettingItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1833266908710079D4F5 /* SettingItem.swift */; };
-		20FC183926693C930079D4F5 /* UIButtonBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183826693C930079D4F5 /* UIButtonBackground.swift */; };
 		20FC183B266946DC0079D4F5 /* TuneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183A266946DC0079D4F5 /* TuneViewController.swift */; };
 		20FC183D266A0D700079D4F5 /* SettingsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183C266A0D700079D4F5 /* SettingsUtils.swift */; };
 		20FC1840266A12850079D4F5 /* DiseaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC183F266A12850079D4F5 /* DiseaseModel.swift */; };
+		20FC1844266A59820079D4F5 /* FooterButtonProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1843266A59820079D4F5 /* FooterButtonProvider.swift */; };
+		20FC1846266A69B60079D4F5 /* ModelingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1845266A69B60079D4F5 /* ModelingViewController.swift */; };
+		20FC1848266A7E9A0079D4F5 /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */; };
+		20FC184E266A995C0079D4F5 /* UIColorAdjustable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */; };
+		20FC1850266C8C160079D4F5 /* UIGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC184F266C8C160079D4F5 /* UIGridLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,12 +53,15 @@
 		20FC18292668E8AB0079D4F5 /* SettingTextFieldCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingTextFieldCell.xib; sourceTree = "<group>"; };
 		20FC182D2668E9220079D4F5 /* SettingCompositeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingCompositeCell.swift; sourceTree = "<group>"; };
 		20FC182E2668E9220079D4F5 /* SettingCompositeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingCompositeCell.xib; sourceTree = "<group>"; };
-		20FC18312668F03F0079D4F5 /* ParametersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametersViewController.swift; sourceTree = "<group>"; };
 		20FC1833266908710079D4F5 /* SettingItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingItem.swift; sourceTree = "<group>"; };
-		20FC183826693C930079D4F5 /* UIButtonBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonBackground.swift; sourceTree = "<group>"; };
 		20FC183A266946DC0079D4F5 /* TuneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TuneViewController.swift; sourceTree = "<group>"; };
 		20FC183C266A0D700079D4F5 /* SettingsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsUtils.swift; sourceTree = "<group>"; };
 		20FC183F266A12850079D4F5 /* DiseaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiseaseModel.swift; sourceTree = "<group>"; };
+		20FC1843266A59820079D4F5 /* FooterButtonProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FooterButtonProvider.swift; sourceTree = "<group>"; };
+		20FC1845266A69B60079D4F5 /* ModelingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelingViewController.swift; sourceTree = "<group>"; };
+		20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCustom.swift; sourceTree = "<group>"; };
+		20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAdjustable.swift; sourceTree = "<group>"; };
+		20FC184F266C8C160079D4F5 /* UIGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGridLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,20 +94,19 @@
 		20FC17FD2668923B0079D4F5 /* Diseasy */ = {
 			isa = PBXGroup;
 			children = (
+				20FC1851266C8C4A0079D4F5 /* UI Related */,
 				20FC183E266A12640079D4F5 /* Models */,
 				20FC18172668D8E40079D4F5 /* Views */,
 				20FC1842266A1BA70079D4F5 /* Controllers */,
 				20FC1841266A1B950079D4F5 /* Utils */,
 				20FC1835266912AA0079D4F5 /* Protocols */,
+				20FC18072668923C0079D4F5 /* Assets.xcassets */,
 				20FC17FE2668923B0079D4F5 /* AppDelegate.swift */,
 				20FC18002668923B0079D4F5 /* SceneDelegate.swift */,
 				20FC18042668923B0079D4F5 /* Main.storyboard */,
-				20FC18072668923C0079D4F5 /* Assets.xcassets */,
 				20FC18092668923C0079D4F5 /* LaunchScreen.storyboard */,
 				20FC180C2668923C0079D4F5 /* Info.plist */,
 				20FC18142668AE160079D4F5 /* Constants.swift */,
-				20FC1833266908710079D4F5 /* SettingItem.swift */,
-				20FC183826693C930079D4F5 /* UIButtonBackground.swift */,
 			);
 			path = Diseasy;
 			sourceTree = "<group>";
@@ -109,6 +114,8 @@
 		20FC18172668D8E40079D4F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				20FC1843266A59820079D4F5 /* FooterButtonProvider.swift */,
+				20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */,
 				20FC182C2668E8D90079D4F5 /* SettingCompositeCell */,
 				20FC18272668E88C0079D4F5 /* SettingTextFieldCell */,
 				20FC18222668E67D0079D4F5 /* SettingSwitchCell */,
@@ -181,6 +188,7 @@
 		20FC1841266A1B950079D4F5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				20FC1833266908710079D4F5 /* SettingItem.swift */,
 				20FC183C266A0D700079D4F5 /* SettingsUtils.swift */,
 			);
 			path = Utils;
@@ -189,10 +197,19 @@
 		20FC1842266A1BA70079D4F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				20FC18312668F03F0079D4F5 /* ParametersViewController.swift */,
 				20FC183A266946DC0079D4F5 /* TuneViewController.swift */,
+				20FC1845266A69B60079D4F5 /* ModelingViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		20FC1851266C8C4A0079D4F5 /* UI Related */ = {
+			isa = PBXGroup;
+			children = (
+				20FC184F266C8C160079D4F5 /* UIGridLayout.swift */,
+				20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */,
+			);
+			path = "UI Related";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,15 +292,18 @@
 				20FC18012668923B0079D4F5 /* SceneDelegate.swift in Sources */,
 				20FC1834266908710079D4F5 /* SettingItem.swift in Sources */,
 				20FC1840266A12850079D4F5 /* DiseaseModel.swift in Sources */,
+				20FC1846266A69B60079D4F5 /* ModelingViewController.swift in Sources */,
 				20FC181A2668D9BB0079D4F5 /* SettingSliderCell.swift in Sources */,
-				20FC18322668F03F0079D4F5 /* ParametersViewController.swift in Sources */,
+				20FC1850266C8C160079D4F5 /* UIGridLayout.swift in Sources */,
 				20FC183D266A0D700079D4F5 /* SettingsUtils.swift in Sources */,
 				20FC183B266946DC0079D4F5 /* TuneViewController.swift in Sources */,
+				20FC1844266A59820079D4F5 /* FooterButtonProvider.swift in Sources */,
 				20FC182A2668E8AB0079D4F5 /* SettingTextFieldCell.swift in Sources */,
 				20FC18252668E6990079D4F5 /* SettingSwitchCell.swift in Sources */,
 				20FC18202668E0940079D4F5 /* SettingStepperCell.swift in Sources */,
+				20FC184E266A995C0079D4F5 /* UIColorAdjustable.swift in Sources */,
 				20FC18152668AE160079D4F5 /* Constants.swift in Sources */,
-				20FC183926693C930079D4F5 /* UIButtonBackground.swift in Sources */,
+				20FC1848266A7E9A0079D4F5 /* UIButtonCustom.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

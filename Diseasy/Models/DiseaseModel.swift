@@ -20,5 +20,14 @@ class DiseaseModel {
         static let quarantineRate: FloatValue = (0.5, 0, 1)
     }
     
+    class Subject {
+        enum State {
+            case Susceptible
+            case InfectedIncubation
+            case InfectedSymptoms
+            case Recovered
+            case Quarantined
+        }
+    }
     
 }

@@ -9,7 +9,7 @@ import UIKit
 
 class SettingTextFieldCell: UITableViewCell {
     static let reusableIdentifier = "SettingTextFieldCell"
-    
+    static let nibName = "SettingTextFieldCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -9,6 +9,7 @@ import UIKit
 
 class SettingSliderCell: UITableViewCell {
     static let reusableIdentifier = "SettingSliderCell"
+    static let nibName = "SettingSliderCell"
 
     @IBOutlet weak internal var slider: UISlider!
     @IBOutlet weak internal var valueLabel: UILabel!
