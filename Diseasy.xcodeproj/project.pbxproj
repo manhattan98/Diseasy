@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		207A413D266F13BF00ED6B87 /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A413C266F13BF00ED6B87 /* State.swift */; };
+		207A413F266F13E000ED6B87 /* Subject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A413E266F13E000ED6B87 /* Subject.swift */; };
+		207A4141266F144B00ED6B87 /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A4140266F144B00ED6B87 /* Defaults.swift */; };
+		207A4150267070FF00ED6B87 /* UIViewShadow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A414F267070FF00ED6B87 /* UIViewShadow.swift */; };
+		207A41542670751200ED6B87 /* ZoomButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A41532670751200ED6B87 /* ZoomButtons.swift */; };
+		207A41562670756B00ED6B87 /* StatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A41552670756B00ED6B87 /* StatisticsView.swift */; };
+		207A415A26707C6C00ED6B87 /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A415926707C6C00ED6B87 /* Queue.swift */; };
 		20FC17FF2668923B0079D4F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC17FE2668923B0079D4F5 /* AppDelegate.swift */; };
 		20FC18012668923B0079D4F5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC18002668923B0079D4F5 /* SceneDelegate.swift */; };
 		20FC18062668923B0079D4F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20FC18042668923B0079D4F5 /* Main.storyboard */; };
@@ -32,9 +39,17 @@
 		20FC1848266A7E9A0079D4F5 /* UIButtonCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */; };
 		20FC184E266A995C0079D4F5 /* UIColorAdjustable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */; };
 		20FC1850266C8C160079D4F5 /* UIGridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC184F266C8C160079D4F5 /* UIGridLayout.swift */; };
+		20FC1861266DEE880079D4F5 /* ArrayStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FC1860266DEE870079D4F5 /* ArrayStack.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		207A413C266F13BF00ED6B87 /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		207A413E266F13E000ED6B87 /* Subject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subject.swift; sourceTree = "<group>"; };
+		207A4140266F144B00ED6B87 /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
+		207A414F267070FF00ED6B87 /* UIViewShadow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewShadow.swift; sourceTree = "<group>"; };
+		207A41532670751200ED6B87 /* ZoomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButtons.swift; sourceTree = "<group>"; };
+		207A41552670756B00ED6B87 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
+		207A415926707C6C00ED6B87 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
 		20FC17FB2668923B0079D4F5 /* Diseasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diseasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FC17FE2668923B0079D4F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FC18002668923B0079D4F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +77,7 @@
 		20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButtonCustom.swift; sourceTree = "<group>"; };
 		20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorAdjustable.swift; sourceTree = "<group>"; };
 		20FC184F266C8C160079D4F5 /* UIGridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIGridLayout.swift; sourceTree = "<group>"; };
+		20FC1860266DEE870079D4F5 /* ArrayStack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayStack.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +91,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		207A4151267074BD00ED6B87 /* TuneViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20FC183A266946DC0079D4F5 /* TuneViewController.swift */,
+			);
+			path = TuneViewController;
+			sourceTree = "<group>";
+		};
+		207A4152267074D100ED6B87 /* ModelingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				20FC1845266A69B60079D4F5 /* ModelingViewController.swift */,
+				207A41532670751200ED6B87 /* ZoomButtons.swift */,
+				207A41552670756B00ED6B87 /* StatisticsView.swift */,
+			);
+			path = ModelingViewController;
+			sourceTree = "<group>";
+		};
 		20FC17F22668923B0079D4F5 = {
 			isa = PBXGroup;
 			children = (
@@ -181,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				20FC183F266A12850079D4F5 /* DiseaseModel.swift */,
+				207A413C266F13BF00ED6B87 /* State.swift */,
+				207A413E266F13E000ED6B87 /* Subject.swift */,
+				207A4140266F144B00ED6B87 /* Defaults.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -188,6 +225,8 @@
 		20FC1841266A1B950079D4F5 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				20FC1860266DEE870079D4F5 /* ArrayStack.swift */,
+				207A415926707C6C00ED6B87 /* Queue.swift */,
 				20FC1833266908710079D4F5 /* SettingItem.swift */,
 				20FC183C266A0D700079D4F5 /* SettingsUtils.swift */,
 			);
@@ -197,8 +236,8 @@
 		20FC1842266A1BA70079D4F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				20FC183A266946DC0079D4F5 /* TuneViewController.swift */,
-				20FC1845266A69B60079D4F5 /* ModelingViewController.swift */,
+				207A4151267074BD00ED6B87 /* TuneViewController */,
+				207A4152267074D100ED6B87 /* ModelingViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -208,6 +247,7 @@
 			children = (
 				20FC184F266C8C160079D4F5 /* UIGridLayout.swift */,
 				20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */,
+				207A414F267070FF00ED6B87 /* UIViewShadow.swift */,
 			);
 			path = "UI Related";
 			sourceTree = "<group>";
@@ -290,11 +330,19 @@
 				20FC17FF2668923B0079D4F5 /* AppDelegate.swift in Sources */,
 				20FC182F2668E9220079D4F5 /* SettingCompositeCell.swift in Sources */,
 				20FC18012668923B0079D4F5 /* SceneDelegate.swift in Sources */,
+				207A4150267070FF00ED6B87 /* UIViewShadow.swift in Sources */,
+				207A41562670756B00ED6B87 /* StatisticsView.swift in Sources */,
+				207A413D266F13BF00ED6B87 /* State.swift in Sources */,
 				20FC1834266908710079D4F5 /* SettingItem.swift in Sources */,
 				20FC1840266A12850079D4F5 /* DiseaseModel.swift in Sources */,
+				207A41542670751200ED6B87 /* ZoomButtons.swift in Sources */,
 				20FC1846266A69B60079D4F5 /* ModelingViewController.swift in Sources */,
+				207A413F266F13E000ED6B87 /* Subject.swift in Sources */,
+				207A4141266F144B00ED6B87 /* Defaults.swift in Sources */,
+				20FC1861266DEE880079D4F5 /* ArrayStack.swift in Sources */,
 				20FC181A2668D9BB0079D4F5 /* SettingSliderCell.swift in Sources */,
 				20FC1850266C8C160079D4F5 /* UIGridLayout.swift in Sources */,
+				207A415A26707C6C00ED6B87 /* Queue.swift in Sources */,
 				20FC183D266A0D700079D4F5 /* SettingsUtils.swift in Sources */,
 				20FC183B266946DC0079D4F5 /* TuneViewController.swift in Sources */,
 				20FC1844266A59820079D4F5 /* FooterButtonProvider.swift in Sources */,

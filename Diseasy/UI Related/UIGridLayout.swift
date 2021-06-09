@@ -57,7 +57,7 @@ class UIGridLayout: UICollectionViewFlowLayout {
     override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         let minRow = (rect.origin.x > 0) ? Int(floor(rect.origin.x / (itemWidth + space))) : 0
         let maxRow = min(columns - 1, Int(ceil(rect.size.width / (itemWidth + space)) + CGFloat(minRow)))
-        var attributes : Array<UICollectionViewLayoutAttributes> = [UICollectionViewLayoutAttributes]()
+        var attributes = [UICollectionViewLayoutAttributes]()
         
         for i in 0 ..< rows {
             for j in minRow ... maxRow {

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -49,7 +50,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" id="oYI-9X-Qdh"/>
                     <connections>
-                        <segue destination="XUi-Y1-rdg" kind="show" identifier="goToModelingSegue" id="vSJ-b0-rCa"/>
+                        <segue destination="XUi-Y1-rdg" kind="show" identifier="goToModelingSegue" id="wBN-1J-fF3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTc-IV-V0n" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -80,7 +81,45 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mAR-sO-5hH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="385" y="378"/>
+            <point key="canvasLocation" x="335" y="378"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tGn-W5-gvX">
+            <objects>
+                <viewController id="g4e-Lo-51x" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5DB-0O-q4p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fk8-ap-ha5">
+                                <rect key="frame" x="0.0" y="44" width="375" height="734"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="VPp-7k-U1Y">
+                                    <size key="itemSize" width="108" height="125"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Mkl-Zd-P4b"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fk8-ap-ha5" firstAttribute="top" secondItem="Mkl-Zd-P4b" secondAttribute="top" id="IAw-qt-wk3"/>
+                            <constraint firstItem="fk8-ap-ha5" firstAttribute="leading" secondItem="Mkl-Zd-P4b" secondAttribute="leading" id="S7t-xx-FWt"/>
+                            <constraint firstItem="Mkl-Zd-P4b" firstAttribute="bottom" secondItem="fk8-ap-ha5" secondAttribute="bottom" id="ZZa-n8-tuF"/>
+                            <constraint firstItem="Mkl-Zd-P4b" firstAttribute="trailing" secondItem="fk8-ap-ha5" secondAttribute="trailing" id="wtY-Kq-ofc"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="V6e-85-bns"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fk8-ap-ha5" id="pFb-nw-xVg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Haa-60-L6a" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1180" y="532"/>
         </scene>
     </scenes>
     <resources>

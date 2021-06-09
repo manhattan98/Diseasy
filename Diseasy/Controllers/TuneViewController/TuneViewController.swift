@@ -8,56 +8,49 @@
 import UIKit
 
 class TuneViewController: UITableViewController {
-    // settings description
+    
+    // initialize settings description
     let settings: [SettingItem] = [
         .SettingSliderItem(get: { Float(SettingsUtils.groupSize) },
                            set: { val in SettingsUtils.groupSize = Int(val) },
                            title: K.GROUP_SIZE,
                            description: K.GROUP_SIZE_DESC,
-                           min: Float(DiseaseModel.Defaults.groupSize.min),
-                           max: Float(DiseaseModel.Defaults.groupSize.max),
+                           min: Float(Defaults.groupSize.min),
+                           max: Float(Defaults.groupSize.max),
                            fractionDigits: 0,
                            showValue: true),
         .SettingStepperItem(get: { Double(SettingsUtils.timePeriod) },
                             set: { val in SettingsUtils.timePeriod = Float(val) },
                             title: K.TIME_PERIOD,
                             description: K.TIME_PERIOD_DESC,
-                            min: Double(DiseaseModel.Defaults.timePeriod.min),
-                            max: Double(DiseaseModel.Defaults.timePeriod.max),
-                            step: 1,
-                            fractionDigits: 0),
+                            min: Double(Defaults.timePeriod.min),
+                            max: Double(Defaults.timePeriod.max),
+                            step: 0.1,
+                            fractionDigits: 1),
         .SettingStepperItem(get: { Double(SettingsUtils.infectionFactor) },
                             set: { val in SettingsUtils.infectionFactor = Int(val) },
                             title: K.INFECTION_FACTOR,
                             description: K.INFECTION_FACTOR_DESC,
-                            min: Double(DiseaseModel.Defaults.infectionFactor.min),
-                            max: Double(DiseaseModel.Defaults.infectionFactor.max),
+                            min: Double(Defaults.infectionFactor.min),
+                            max: Double(Defaults.infectionFactor.max),
                             step: 1,
                             fractionDigits: 0),
         .SettingSliderItem(get: { Float(SettingsUtils.incubationPeriod) },
-                           set: { val in SettingsUtils.incubationPeriod = val },
+                           set: { val in SettingsUtils.incubationPeriod = Int(val) },
                            title: K.INCUBATION_PERIOD,
                            description: K.INCUBATION_PERIOD_DESC,
-                           min: DiseaseModel.Defaults.incubationPeriod.min,
-                           max: DiseaseModel.Defaults.incubationPeriod.max,
+                           min: Float(Defaults.incubationPeriod.min),
+                           max: Float(Defaults.incubationPeriod.max),
                            fractionDigits: 0,
                            showValue: false),
         .SettingSliderItem(get: { Float(SettingsUtils.symptomsPeriod) },
-                           set: { val in SettingsUtils.symptomsPeriod = val },
+                           set: { val in SettingsUtils.symptomsPeriod = Int(val) },
                            title: K.SYMPTOMS_PERIOD,
                            description: K.SYMPTOMS_PERIOD_DESC,
-                           min: DiseaseModel.Defaults.symptomsPeriod.min,
-                           max: DiseaseModel.Defaults.symptomsPeriod.max,
+                           min: Float(Defaults.symptomsPeriod.min),
+                           max: Float(Defaults.symptomsPeriod.max),
                            fractionDigits: 0,
                            showValue: false),
-        .SettingStepperItem(get: { Double(SettingsUtils.quarantineRate) },
-                            set: { val in SettingsUtils.quarantineRate = Float(val) },
-                            title: K.QUARANTINE_RATE,
-                            description: K.QUARANTINE_RATE_DESC,
-                            min: Double(DiseaseModel.Defaults.quarantineRate.min),
-                            max: Double(DiseaseModel.Defaults.quarantineRate.max),
-                            step: 0.1,
-                            fractionDigits: 1),
     ]
     
     var buttonProvider: FooterButtonProvider!
@@ -75,12 +68,12 @@ class TuneViewController: UITableViewController {
         
         // initialize footer button
         buttonProvider = FooterButtonProvider(parent: self,
-                                              selector: #selector(buttonPressed),
+                                              action: #selector(buttonPressed),
                                               fontSize: 17,
                                               buttonHeight: 50,
                                               verticalIndent: 40,
                                               horizontalIndent: 16,
-                                              backgroundColor: #colorLiteral(red: 0.501960814, green: 0.501960814, blue: 0.501960814, alpha: 1))
+                                              backgroundColor: .darkGray)
         
     }
     
@@ -88,8 +81,9 @@ class TuneViewController: UITableViewController {
     // MARK: - Button callback
     
     @objc
-    func buttonPressed(sender: UIButton) {
+    func buttonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.GO_TO_MODELING_SEGUE, sender: self)
+        //self.performSegue(withIdentifier: K.GO_TO_MODELLING_SEGUE, sender: self)
     }
 
     
@@ -154,7 +148,7 @@ class TuneViewController: UITableViewController {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch segue.identifier {
-        case K.GO_TO_MODELING_SEGUE:
+        case K.GO_TO_MODELING_SEGUE, K.GO_TO_MODELLING_SEGUE:
             print("performing segue...")
         default:
             fatalError("unknown segue")

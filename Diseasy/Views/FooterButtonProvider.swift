@@ -11,7 +11,7 @@ class FooterButtonProvider {
     let footerView: UIView
     let footerHeight: CGFloat
     
-    init(parent: UIViewController, selector: Selector, fontSize: CGFloat, buttonHeight: CGFloat, verticalIndent: CGFloat, horizontalIndent: CGFloat, backgroundColor: UIColor) {
+    init(parent: UIViewController, action selector: Selector, fontSize: CGFloat, buttonHeight: CGFloat, verticalIndent: CGFloat, horizontalIndent: CGFloat, backgroundColor: UIColor) {
         self.footerHeight = verticalIndent + buttonHeight
         
 
@@ -35,13 +35,7 @@ class FooterButtonProvider {
         
         footerButton.addTarget(parent, action: selector, for: .touchUpInside)
         
-        
-        // make some shadow
-        footerButton.layer.shadowColor = UIColor.black.cgColor
-        footerButton.layer.shadowOffset = CGSize.zero
-        footerButton.layer.shadowOpacity = 0.5
-        footerButton.layer.shadowRadius = 15.0
-        footerButton.layer.masksToBounds =  false
+        footerButton.makeSomeShadow(opacity: 0.3, radius: 10.0)
         
         
         self.footerView = UIView()
