@@ -17,9 +17,9 @@ class SettingsUtils {
         }
     }
     
-    class var timePeriod: Float {
+    class var timePeriod: Double {
         get {
-            return UserDefaults.standard.object(forKey: K.SETTING_TIME_PERIOD) as? Float ?? Defaults.timePeriod.default
+            return UserDefaults.standard.object(forKey: K.SETTING_TIME_PERIOD) as? Double ?? Defaults.timePeriod.default
         } set {
             UserDefaults.standard.set(newValue, forKey: K.SETTING_TIME_PERIOD)
         }
@@ -47,6 +47,14 @@ class SettingsUtils {
             return UserDefaults.standard.object(forKey: K.SETTING_SYMPTOMS_PERIOD) as? Int ?? Defaults.symptomsPeriod.default
         } set {
             UserDefaults.standard.set(newValue, forKey: K.SETTING_SYMPTOMS_PERIOD)
+        }
+    }
+    
+    class var contactRadius: Int {
+        get {
+            return UserDefaults.standard.object(forKey: K.SETTING_CONTACT_RADIUS) as? Int ?? Defaults.contactRadius.default
+        } set {
+            UserDefaults.standard.set(newValue, forKey: K.SETTING_CONTACT_RADIUS)
         }
     }
     

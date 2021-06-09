@@ -9,7 +9,8 @@ import UIKit
 
 class TuneViewController: UITableViewController {
     
-    // initialize settings description
+    // MARK: - Initialize settings
+    
     let settings: [SettingItem] = [
         .SettingSliderItem(get: { Float(SettingsUtils.groupSize) },
                            set: { val in SettingsUtils.groupSize = Int(val) },
@@ -19,12 +20,12 @@ class TuneViewController: UITableViewController {
                            max: Float(Defaults.groupSize.max),
                            fractionDigits: 0,
                            showValue: true),
-        .SettingStepperItem(get: { Double(SettingsUtils.timePeriod) },
-                            set: { val in SettingsUtils.timePeriod = Float(val) },
+        .SettingStepperItem(get: { SettingsUtils.timePeriod },
+                            set: { val in SettingsUtils.timePeriod = val },
                             title: K.TIME_PERIOD,
                             description: K.TIME_PERIOD_DESC,
-                            min: Double(Defaults.timePeriod.min),
-                            max: Double(Defaults.timePeriod.max),
+                            min: Defaults.timePeriod.min,
+                            max: Defaults.timePeriod.max,
                             step: 0.1,
                             fractionDigits: 1),
         .SettingStepperItem(get: { Double(SettingsUtils.infectionFactor) },
@@ -33,6 +34,14 @@ class TuneViewController: UITableViewController {
                             description: K.INFECTION_FACTOR_DESC,
                             min: Double(Defaults.infectionFactor.min),
                             max: Double(Defaults.infectionFactor.max),
+                            step: 1,
+                            fractionDigits: 0),
+        .SettingStepperItem(get: { Double(SettingsUtils.contactRadius) },
+                            set: { val in SettingsUtils.contactRadius = Int(val) },
+                            title: K.CONTACT_RADIUS,
+                            description: K.CONTACT_RADIUS_DESC,
+                            min: Double(Defaults.contactRadius.min),
+                            max: Double(Defaults.contactRadius.max),
                             step: 1,
                             fractionDigits: 0),
         .SettingSliderItem(get: { Float(SettingsUtils.incubationPeriod) },
@@ -67,6 +76,13 @@ class TuneViewController: UITableViewController {
         
         
         // initialize footer button
+        setupModelingButton()
+    }
+    
+    
+    // MARK: - Setup modeling button
+    
+    func setupModelingButton() {
         buttonProvider = FooterButtonProvider(parent: self,
                                               action: #selector(buttonPressed),
                                               fontSize: 17,
@@ -74,7 +90,6 @@ class TuneViewController: UITableViewController {
                                               verticalIndent: 40,
                                               horizontalIndent: 16,
                                               backgroundColor: .darkGray)
-        
     }
     
     
@@ -83,7 +98,6 @@ class TuneViewController: UITableViewController {
     @objc
     func buttonPressed(_ sender: UIButton) {
         self.performSegue(withIdentifier: K.GO_TO_MODELING_SEGUE, sender: self)
-        //self.performSegue(withIdentifier: K.GO_TO_MODELLING_SEGUE, sender: self)
     }
 
     

@@ -9,27 +9,27 @@ import Foundation
 
 class DiseaseModel {
     let groupSize: Int
-    let timePeriod: Float
+    let timePeriod: Double
     let infectionFactor: Int
     let incubationPeriod: Int
     let symptomsPeriod: Int
+    let contactRadius: Int
     
     var healthly: Int
     var infected: Int
-    
-    let contactRadius: Int = 1
-    
+        
     let subjectMatrix: [[Subject]]
         
     
     // MARK: - Init
     
-    init(rows: Int, columns: Int, timePeriod: Float, infectionFactor: Int, incubationPeriod: Int, symptomsPeriod: Int) {
+    init(rows: Int, columns: Int, timePeriod: Double, infectionFactor: Int, incubationPeriod: Int, symptomsPeriod: Int, contactRadius: Int) {
         self.groupSize = rows * columns
         self.timePeriod = timePeriod
         self.infectionFactor = infectionFactor
         self.incubationPeriod = incubationPeriod
         self.symptomsPeriod = symptomsPeriod
+        self.contactRadius = contactRadius
         
         self.healthly = groupSize
         self.infected = 0
@@ -49,7 +49,7 @@ class DiseaseModel {
     /**
      automatically compute matrix dimensions so that difference between rows and columns will be minimum
      */
-    convenience init(groupSize: Int, timePeriod: Float, infectionFactor: Int, incubationPeriod: Int, symptomsPeriod: Int) {
+    convenience init(groupSize: Int, timePeriod: Double, infectionFactor: Int, incubationPeriod: Int, symptomsPeriod: Int, contactRadius: Int) {
         var rows = Int(sqrt(Double(groupSize)))
         var columns = rows
         
@@ -58,7 +58,7 @@ class DiseaseModel {
             columns = groupSize / rows
         }
         
-        self.init(rows: rows, columns: columns, timePeriod: timePeriod, infectionFactor: infectionFactor, incubationPeriod: incubationPeriod, symptomsPeriod: symptomsPeriod)
+        self.init(rows: rows, columns: columns, timePeriod: timePeriod, infectionFactor: infectionFactor, incubationPeriod: incubationPeriod, symptomsPeriod: symptomsPeriod, contactRadius: contactRadius)
     }
     
     
@@ -122,6 +122,8 @@ class DiseaseModel {
 
         let diseasedCount = Int.random(in: Defaults.infectionFactor.min ... min(infectionFactor, susceptibles.count))
         for bound in 0 ..< diseasedCount {
+            
+            // every random index computed from non intersecting ranges, so every random index is unique
             let step = susceptibles.count / diseasedCount
             let randomIndex = Int.random(in: bound * step ..< (bound + 1) * step)
             
@@ -141,9 +143,9 @@ class DiseaseModel {
     
     // MARK: - Async computation
     
-    let subjectQueue = Queue<Subject>()
+    var currentProcessing = Queue<Subject>()
+    var nextProcessing = Queue<Subject>()
     
-    let stepBarrier = Subject(location: (-1, -1))
     
     let dispatchQueue = DispatchQueue(label: "DiseaseDispatchQueue", qos: .userInitiated, attributes: [], autoreleaseFrequency: .inherit, target: DispatchQueue.global(qos: .userInitiated))
     
@@ -155,18 +157,17 @@ class DiseaseModel {
             var changed = [Subject]()
             
             // current processing has another subject to process and self is not nil
-            while let processed = self?.subjectQueue.poll(), processed !== self!.stepBarrier {
+            while let processed = self?.currentProcessing.poll() {
                 guard let self = self else { return }
                 
                 // run every subject in current processing as distinct async operation
                 self.processingQueue.sync {
-                    self.process(processed, changed: &changed, queue: self.subjectQueue)
-                    //print("processed another subject")
+                    self.process(processed, changed: &changed, queue: self.nextProcessing)
                 }
             }
             guard let self = self else { return }
-                        
-            self.subjectQueue.add(self.stepBarrier)
+            swap(&self.currentProcessing, &self.nextProcessing)
+            
             DispatchQueue.main.async { callback(changed) }
         }
     }
@@ -175,9 +176,7 @@ class DiseaseModel {
         var changed = [Subject]()
         
         processingQueue.async { [self] in
-            self.process(subject, changed: &changed, queue: self.subjectQueue)
-                        
-            //print(changed.count)
+            self.process(subject, changed: &changed, queue: self.currentProcessing)
             
             DispatchQueue.main.async { callback(changed) }
         }

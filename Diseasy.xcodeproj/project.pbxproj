@@ -148,8 +148,9 @@
 		20FC18172668D8E40079D4F5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				20FC1843266A59820079D4F5 /* FooterButtonProvider.swift */,
+				207A414F267070FF00ED6B87 /* UIViewShadow.swift */,
 				20FC1847266A7E9A0079D4F5 /* UIButtonCustom.swift */,
+				20FC1843266A59820079D4F5 /* FooterButtonProvider.swift */,
 				20FC182C2668E8D90079D4F5 /* SettingCompositeCell */,
 				20FC18272668E88C0079D4F5 /* SettingTextFieldCell */,
 				20FC18222668E67D0079D4F5 /* SettingSwitchCell */,
@@ -247,7 +248,6 @@
 			children = (
 				20FC184F266C8C160079D4F5 /* UIGridLayout.swift */,
 				20FC184D266A995C0079D4F5 /* UIColorAdjustable.swift */,
-				207A414F267070FF00ED6B87 /* UIViewShadow.swift */,
 			);
 			path = "UI Related";
 			sourceTree = "<group>";

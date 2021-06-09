@@ -25,6 +25,9 @@ struct K {
     static let SYMPTOMS_PERIOD = "Симптомный период"
     static let SYMPTOMS_PERIOD_DESC = "Длительность активной стадии. Носитель является переносчиком"
     
+    static let CONTACT_RADIUS = "Радиус контакта"
+    static let CONTACT_RADIUS_DESC = "Радиус, в котором один субъект может контактировать с другими субъектами"
+    
     static let QUARANTINE_RATE = "Вероятность карантина"
     static let QUARANTINE_RATE_DESC = "Шанс того, что носитель уйдет на карантин сразу после появления симптомов. Останавливает передачу вируса"
     
@@ -61,6 +64,7 @@ struct K {
     static let SETTING_INFECTION_FACTOR = "SETTING_INFECTION_FACTOR"
     static let SETTING_INCUBATION_PERIOD = "SETTING_INCUBATION_PERIOD"
     static let SETTING_SYMPTOMS_PERIOD = "SETTING_SYMPTOMS_PERIOD"
+    static let SETTING_CONTACT_RADIUS = "SETTING_CONTACT_RADIUS"
     static let SETTING_QUARANTINE_RATE = "SETTING_QUARANTINE_RATE"
     
     static let GO_TO_MODELING_SEGUE = "goToModelingSegue"

@@ -12,6 +12,8 @@ class ArrayStack<E> {
     
     func push(_ e: E) { data.append(e) }
     
+    func add(_ e: E) { push(e) }
+    
     func pop() -> E? { data.popLast() }
     
     func peek() -> E? { data.last }

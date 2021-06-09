@@ -38,9 +38,9 @@ class ModelingViewController: UICollectionViewController {
                              timePeriod: SettingsUtils.timePeriod,
                              infectionFactor: SettingsUtils.infectionFactor,
                              incubationPeriod: SettingsUtils.incubationPeriod,
-                             symptomsPeriod: SettingsUtils.symptomsPeriod)
-    
-    
+                             symptomsPeriod: SettingsUtils.symptomsPeriod,
+                             contactRadius: SettingsUtils.contactRadius)
+        
     override func viewDidLoad() {
         super.viewDidLoad()
                 
@@ -100,6 +100,7 @@ class ModelingViewController: UICollectionViewController {
             }
         })
     }
+    
     
     // MARK: - Setup zoom buttons
     
