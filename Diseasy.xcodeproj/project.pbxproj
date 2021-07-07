@@ -50,6 +50,11 @@
 		207A41532670751200ED6B87 /* ZoomButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZoomButtons.swift; sourceTree = "<group>"; };
 		207A41552670756B00ED6B87 /* StatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsView.swift; sourceTree = "<group>"; };
 		207A415926707C6C00ED6B87 /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		20DF9ACE269567270072303B /* Screenshot 2021-07-07 at 10.49.22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-07-07 at 10.49.22.png"; sourceTree = "<group>"; };
+		20DF9ACF269567370072303B /* Screenshot 2021-07-07 at 10.48.17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-07-07 at 10.48.17.png"; sourceTree = "<group>"; };
+		20DF9AD02695673B0072303B /* Screenshot 2021-07-07 at 10.49.53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-07-07 at 10.49.53.png"; sourceTree = "<group>"; };
+		20DF9AD12695673B0072303B /* Screenshot 2021-07-07 at 10.48.33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-07-07 at 10.48.33.png"; sourceTree = "<group>"; };
+		20DF9AD22695673B0072303B /* Screenshot 2021-07-07 at 10.48.45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Screenshot 2021-07-07 at 10.48.45.png"; sourceTree = "<group>"; };
 		20FC17FB2668923B0079D4F5 /* Diseasy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Diseasy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FC17FE2668923B0079D4F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FC18002668923B0079D4F5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -109,9 +114,22 @@
 			path = ModelingViewController;
 			sourceTree = "<group>";
 		};
+		20DF9ACD269566B20072303B /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				20DF9ACF269567370072303B /* Screenshot 2021-07-07 at 10.48.17.png */,
+				20DF9AD12695673B0072303B /* Screenshot 2021-07-07 at 10.48.33.png */,
+				20DF9AD22695673B0072303B /* Screenshot 2021-07-07 at 10.48.45.png */,
+				20DF9ACE269567270072303B /* Screenshot 2021-07-07 at 10.49.22.png */,
+				20DF9AD02695673B0072303B /* Screenshot 2021-07-07 at 10.49.53.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 		20FC17F22668923B0079D4F5 = {
 			isa = PBXGroup;
 			children = (
+				20DF9ACD269566B20072303B /* Screenshots */,
 				20FC17FD2668923B0079D4F5 /* Diseasy */,
 				20FC17FC2668923B0079D4F5 /* Products */,
 			);
